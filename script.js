@@ -10,8 +10,8 @@ const CONFIG = {
   titulo: "Desenvolvedor Web",
   bio: "Apaixonado por criar soluções digitais com código limpo e interfaces bonitas.",
 
-  github: "https://github.com/",          // ← coloque seu usuário
-  linkedin: "https://linkedin.com/in/",   // ← coloque seu perfil
+  github: "https://github.com/marcosestumano",          // ← coloque seu usuário
+  linkedin: "https://www.linkedin.com/in/marcosviniicius/",   // ← coloque seu perfil
   email: "marcosviniciiusz77@gmail.com",
 };
 
@@ -181,15 +181,15 @@ const TOOLS = [
   {
     nome: "Supabase",
     desc: "Banco de dados e auth",
-    emoji: "🗄️",
-    logo: "https://www.svgrepo.com/show/374111/supabase.svg",
+    emoji: "",
+    logo: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/supabase.svg",
     cor: "green",
   },
   {
     nome: "Claude (Anthropic)",
     desc: "IA generativa",
-    emoji: "🤖",
-    logo: "",
+    emoji: "",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     cor: "orange",
   },
   {
