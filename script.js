@@ -1,14 +1,36 @@
+/* ============================================================
+   PORTFÓLIO — script.js
+   ============================================================ */
 
+/* ============================================================
+   ✏️ EDITE AQUI — Seus dados pessoais
+   ============================================================ */
 const CONFIG = {
   nome: "Marcos Vinícius",
   titulo: "Desenvolvedor Web",
   bio: "Apaixonado por criar soluções digitais com código limpo e interfaces bonitas.",
 
-  github: "https://github.com/marcosestumano",      
-  linkedin: "https://www.linkedin.com/in/marcosviniicius/",   
+  github: "https://github.com/",          // ← coloque seu usuário
+  linkedin: "https://linkedin.com/in/",   // ← coloque seu perfil
   email: "marcosviniciiusz77@gmail.com",
 };
 
+/* ============================================================
+   ✏️ EDITE AQUI — Adicione seus projetos
+   ============================================================
+
+   Para adicionar um projeto, copie o bloco abaixo e preencha:
+
+   {
+     titulo: "Nome do Projeto",
+     descricao: "O que o projeto faz em 1-2 frases.",
+     emoji: "🚀",
+     tags: ["React", "Node.js", "MongoDB"],
+     status: "live",        // "live" | "dev" | "archived"
+     github: "https://github.com/usuario/repo",
+     demo: "https://projeto.vercel.app",
+   },
+   ============================================================ */
 const PROJECTS = [
   {
     titulo: "Calculadora de IMC",
@@ -43,7 +65,7 @@ const PROJECTS = [
     emoji: "🚀",
     tags: ["HTML", "CSS", "JavaScript"],
     status: "live",
-    github: "https://landing-ppb.vercel.app/",
+    github: "",
     demo: "https://landing-ppb.vercel.app/",
   },
   {
@@ -89,7 +111,7 @@ const PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript"],
     status: "live",
     github: "https://github.com/MarcxS77/Lily-s-finance-management",
-    demo: "https://github.com/marcosestumano/Lily-s-finance-management",
+    demo: "https://lily-s-finance-management-peach.vercel.app/",
   },
   {
     titulo: "CTO Finder",
@@ -100,10 +122,12 @@ const PROJECTS = [
     github: "https://github.com/MarcxS77/cto-finder",
     demo: "https://cto-finder.vercel.app/",
   },
-
+  // ← ADICIONE MAIS PROJETOS AQUI
 ];
 
-
+/* ============================================================
+   ✏️ EDITE AQUI — Suas habilidades
+   ============================================================ */
 const SKILLS = [
   {
     categoria: "Frontend",
@@ -128,7 +152,94 @@ const SKILLS = [
   // ← ADICIONE MAIS CATEGORIAS AQUI
 ];
 
+/* ============================================================
+   ✏️ EDITE AQUI — Ferramentas & Serviços utilizados
+   ============================================================
 
+   Campos:
+     nome    : nome da ferramenta
+     desc    : uso resumido em 2-3 palavras
+     emoji   : ícone fallback (usado se não houver logo)
+     logo    : URL de um logo (opcional — use "" para usar o emoji)
+     cor     : "blue" | "green" | "purple" | "orange" | "red" | "cyan" | "pink"
+   ============================================================ */
+const TOOLS = [
+  {
+    nome: "Google OAuth",
+    desc: "Autenticação de usuários",
+    emoji: "🔐",
+    logo: "https://www.svgrepo.com/show/475656/google-color.svg",
+    cor: "blue",
+  },
+  {
+    nome: "Google Console",
+    desc: "APIs e credenciais",
+    emoji: "⚙️",
+    logo: "https://www.svgrepo.com/show/475656/google-color.svg",
+    cor: "blue",
+  },
+  {
+    nome: "Supabase",
+    desc: "Banco de dados e auth",
+    emoji: "🗄️",
+    logo: "https://www.svgrepo.com/show/374111/supabase.svg",
+    cor: "green",
+  },
+  {
+    nome: "Claude (Anthropic)",
+    desc: "IA generativa",
+    emoji: "🤖",
+    logo: "",
+    cor: "orange",
+  },
+  {
+    nome: "Vercel",
+    desc: "Deploy e hospedagem",
+    emoji: "▲",
+    logo: "https://www.svgrepo.com/show/361653/vercel-logo.svg",
+    cor: "purple",
+  },
+  {
+    nome: "GitHub",
+    desc: "Versionamento",
+    emoji: "🐙",
+    logo: "https://www.svgrepo.com/show/475654/github-color.svg",
+    cor: "purple",
+  },
+  {
+    nome: "Figma",
+    desc: "Design e protótipos",
+    emoji: "🎨",
+    logo: "https://www.svgrepo.com/show/448222/figma.svg",
+    cor: "pink",
+  },
+  {
+    nome: "VS Code",
+    desc: "Editor de código",
+    emoji: "💻",
+    logo: "https://www.svgrepo.com/show/374171/vscode.svg",
+    cor: "blue",
+  },
+  {
+    nome: "PokéAPI",
+    desc: "API REST pública",
+    emoji: "🔴",
+    logo: "",
+    cor: "red",
+  },
+  {
+    nome: "OpenWeather API",
+    desc: "Dados meteorológicos",
+    emoji: "🌤️",
+    logo: "",
+    cor: "cyan",
+  },
+  // ← ADICIONE MAIS FERRAMENTAS AQUI
+];
+
+/* ============================================================
+   Renderização — não precisa editar abaixo
+   ============================================================ */
 
 const ICONS = {
   github: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58 0-.28-.01-1.03-.02-2.02-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.21.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>`,
@@ -171,8 +282,8 @@ function renderProjects() {
       : `<span class="project-btn project-btn-gh project-btn-disabled">${ICONS.github} Repositório</span>`;
 
     const demoBtn = p.demo
-      ? `<a href="${p.demo}" target="_blank" class="project-btn project-btn-demo">${ICONS.externalLink} Ver</a>`
-      : `<span class="project-btn project-btn-demo project-btn-disabled">${ICONS.externalLink} Ver</span>`;
+      ? `<a href="${p.demo}" target="_blank" class="project-btn project-btn-demo">${ICONS.externalLink} Ver no Vercel</a>`
+      : `<span class="project-btn project-btn-demo project-btn-disabled">${ICONS.externalLink} Ver no Vercel</span>`;
 
     const footer = `<div class="project-footer">${ghBtn}${demoBtn}</div>`;
 
@@ -218,9 +329,31 @@ function renderContact() {
   container.innerHTML = links.join("");
 }
 
+function renderTools() {
+  const container = document.getElementById("tools-container");
+  if (!container) return;
+
+  container.innerHTML = TOOLS.map(t => {
+    const logoEl = t.logo
+      ? `<img src="${t.logo}" alt="${t.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      : "";
+    const emojiEl = `<span style="${t.logo ? "display:none" : ""}">${t.emoji}</span>`;
+
+    return `
+      <div class="tool-card" data-color="${t.cor}">
+        <div class="tool-logo">${logoEl}${emojiEl}</div>
+        <div class="tool-info">
+          <div class="tool-name">${t.nome}</div>
+          <div class="tool-desc">${t.desc}</div>
+        </div>
+      </div>`;
+  }).join("");
+}
+
 /* ── Init ────────────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
+  renderTools();
   renderContact();
 });
